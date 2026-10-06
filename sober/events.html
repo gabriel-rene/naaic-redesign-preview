@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Events | NAAIC</title>
+<meta name="description" content="Design preview of the NAAIC events page.">
+<link rel="icon" href="img/brand/naaic-sparkle.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<p class="preview-bar">Design preview · Sober direction · not the live site</p>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <picture>
+        <source media="(max-width: 480px)" srcset="img/brand/light-mobile.svg">
+        <img src="img/brand/light.svg" alt="NAAIC, National Applied AI Consortium" width="242" height="32">
+      </picture>
+    </a>
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="bars" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <div class="menu-panel" id="site-menu">
+      <nav aria-label="Main">
+        <ul class="nav-links"><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html" aria-current="page">Events</a></li><li><a href="#">News</a></li></ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-ghost">Sign in</a>
+        <a href="#" class="btn btn-aqua">Subscribe</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="page-head">
+    <div class="container">
+      <h1>Training, convenings, and communities of practice</h1>
+      <p>Join educators from 910 institutions for workshops, certifications, and the people building applied AI education together.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <article class="feat" aria-labelledby="feat-title">
+      <div class="duo"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=70" alt="" loading="lazy"><div class="tint"></div></div>
+      <div class="feat-body">
+        <div class="ev-tags"><span class="tag tag-cop">Annual conference</span><span class="tag tag-college">College</span></div>
+        <p class="when">Dates to be announced · Miami, FL</p>
+        <h2 id="feat-title">NAAIC AI Summit 2027</h2>
+        <p>Keynotes, hands-on labs, and the year's largest gathering of AI educators and industry partners. Dates and registration open soon.</p>
+        <div class="feat-cta"><a href="#" class="btn btn-aqua">Get summit updates</a><a href="#" class="btn btn-ghost">See the 2026 recap</a></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="container">
+    <div class="layout events-layout" data-filter-root>
+      <button type="button" class="filters-toggle" aria-expanded="false" aria-controls="ev-filters">
+        Filters <span class="active-n" hidden>0</span>
+        <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+
+      <form class="rail" id="ev-filters" aria-labelledby="ev-filter-title">
+        <div class="rail-head"><h2 id="ev-filter-title">Filter events</h2><button type="button" class="link-btn" data-clear>Clear all</button></div>
+        <div class="search">
+          <label for="ev-search" class="sr-only">Search events</label>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" id="ev-search" data-filter-search placeholder="Search events" autocomplete="off">
+        </div>
+        <fieldset class="fgroup">
+          <legend>Audience</legend>
+          <label class="check"><input type="checkbox" data-filter="audience" value="college"><span class="swatch" style="background:var(--blue)" aria-hidden="true"></span> College <span class="count"></span></label>
+          <label class="check"><input type="checkbox" data-filter="audience" value="highschool"><span class="swatch" style="background:var(--aqua)" aria-hidden="true"></span> High school <span class="count"></span></label>
+        </fieldset>
+        <fieldset class="fgroup">
+          <legend>Type</legend>
+          <label class="check"><input type="checkbox" data-filter="type" value="training"><span class="swatch" style="background:var(--navy)" aria-hidden="true"></span> Training <span class="count"></span></label>
+          <label class="check"><input type="checkbox" data-filter="type" value="webinar"><span class="swatch" style="background:var(--blue-dark)" aria-hidden="true"></span> Webinar <span class="count"></span></label>
+          <label class="check"><input type="checkbox" data-filter="type" value="cop"><span class="swatch" style="background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink)" aria-hidden="true"></span> Community of practice <span class="count"></span></label>
+          <label class="check"><input type="checkbox" data-filter="type" value="conference"><span class="swatch" style="background:var(--ink-soft)" aria-hidden="true"></span> Annual conference <span class="count"></span></label>
+        </fieldset>
+        <fieldset class="fgroup">
+          <legend>Format</legend>
+          <label class="check"><input type="checkbox" data-filter="format" value="online"> Live online <span class="count"></span></label>
+          <label class="check"><input type="checkbox" data-filter="format" value="inperson"> In person <span class="count"></span></label>
+        </fieldset>
+        <button type="button" class="btn btn-ink rail-done" data-close-filters>Show results</button>
+      </form>
+
+      <div class="results">
+        <h2 class="sr-only">Event listings</h2>
+        <div class="list-top">
+          <div class="tabs" role="tablist" aria-label="Event timing">
+            <button type="button" class="tab" role="tab" id="tab-up" aria-selected="true" aria-controls="panel-up">Upcoming</button>
+            <button type="button" class="tab" role="tab" id="tab-past" aria-selected="false" aria-controls="panel-past" tabindex="-1">Past events</button>
+          </div>
+          <p class="result-count" data-count aria-live="polite">Showing 7 upcoming events</p>
+        </div>
+
+        <div role="tabpanel" id="panel-up" aria-labelledby="tab-up" data-noun="upcoming event">
+        <div class="month-group" data-group>
+          <p class="month">October 2026</p>
+          <article class="ev-card" data-item data-audience="college" data-type="webinar" data-format="online">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-college">College</span><span class="tag tag-training">Webinar</span></div>
+              <h3>IBM SkillsBuild AI in Healthcare: Turn Patient Feedback Into Better Care</h3>
+              <p>A live IBM SkillsBuild session on using AI to turn patient feedback into better care.</p><p class="ev-meta"><span><time datetime="2026-10-06">Oct 06, 2026</time> · Live online</span><span>Host: IBM SkillsBuild</span></p>
+            </div>
+            <a href="#" class="btn btn-blue">Register<span class="sr-only"> for IBM SkillsBuild AI in Healthcare</span></a>
+          </article>
+          <article class="ev-card" data-item data-audience="highschool" data-type="training" data-format="online">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-highschool">High school</span><span class="tag tag-training">Training</span></div>
+              <h3>Curriculum Deep-Dives with Day of AI</h3>
+              <p>Walk through Day of AI curriculum units with the team that builds them.</p><p class="ev-meta"><span><time datetime="2026-10-06">Oct 06, 2026</time> · Live online</span><span>Host: Day of AI</span></p>
+            </div>
+            <a href="#" class="btn btn-blue">Register<span class="sr-only"> for Curriculum Deep-Dives with Day of AI</span></a>
+          </article>
+          <article class="ev-card" data-item data-audience="college" data-type="cop" data-format="online">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-college">College</span><span class="tag tag-cop">Community of practice</span></div>
+              <h3>Community of Practice: AI in Manufacturing</h3>
+              <p>Faculty compare notes on teaching applied AI in advanced manufacturing programs.</p><p class="ev-meta"><span><time datetime="2026-10-09">Oct 09, 2026</time> · Live online</span><span>Host: NAAIC</span></p>
+            </div>
+            <a href="#" class="btn btn-blue">Register<span class="sr-only"> for Community of Practice: AI in Manufacturing</span></a>
+          </article>
+          <article class="ev-card" data-item data-audience="college" data-type="cop" data-format="online">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-college">College</span><span class="tag tag-cop">Community of practice</span></div>
+              <h3>Teaching generative AI across the disciplines</h3>
+              <p>A monthly faculty circle sharing assignments, rubrics, and what is working in real classrooms.</p><p class="ev-meta"><span><time datetime="2026-10-21">Oct 21, 2026</time> · Live online</span><span>2:00 to 3:00 PM ET</span><span>Host: NAAIC</span></p>
+            </div>
+            <a href="#" class="btn btn-blue">Register<span class="sr-only"> for Teaching generative AI across the disciplines</span></a>
+          </article>
+        </div>
+        <div class="month-group" data-group>
+          <p class="month">November 2026</p>
+          <article class="ev-card" data-item data-audience="highschool" data-type="training" data-format="online">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-highschool">High school</span><span class="tag tag-training">Training</span></div>
+              <h3>Day of AI: facilitator certification workshop</h3>
+              <p>Earn the credential to bring Day of AI to your district, with curriculum and classroom support included.</p><p class="ev-meta"><span><time datetime="2026-11-12">Nov 12, 2026</time> · Live online</span><span>11:00 AM to 2:00 PM ET</span><span>Host: Day of AI</span></p>
+            </div>
+            <a href="#" class="btn btn-blue">Register<span class="sr-only"> for Day of AI facilitator certification workshop</span></a>
+          </article>
+          <article class="ev-card" data-item data-audience="highschool" data-type="training" data-format="inperson">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-highschool">High school</span><span class="tag tag-training">Training</span></div>
+              <h3>Hands-on AI lab for CTE teachers</h3>
+              <p>A one-day, in-person build session for career and technical education teachers.</p><p class="ev-meta"><span><time datetime="2026-11-18">Nov 18, 2026</time> · In person</span><span>9:00 AM to 3:00 PM ET</span><span>Miami, FL</span></p>
+            </div>
+            <a href="#" class="btn btn-blue">Register<span class="sr-only"> for Hands-on AI lab for CTE teachers</span></a>
+          </article>
+        </div>
+        <div class="month-group" data-group>
+          <p class="month">December 2026</p>
+          <article class="ev-card" data-item data-audience="college" data-type="training" data-format="online">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-college">College</span><span class="tag tag-training">Training</span></div>
+              <h3>Building an applied AI course in Canvas</h3>
+              <p>A hands-on build session using NAAIC&#x27;s open Canvas shells and assessment banks.</p><p class="ev-meta"><span><time datetime="2026-12-03">Dec 03, 2026</time> · Live online</span><span>1:00 PM ET</span><span>Host: NAAIC</span></p>
+            </div>
+            <a href="#" class="btn btn-blue">Register<span class="sr-only"> for Building an applied AI course in Canvas</span></a>
+          </article>
+        </div>
+        <div class="empty" data-empty>
+          <p class="empty-title">No events match these filters</p>
+          <p>Try removing a filter or searching for something broader.</p>
+          <button type="button" class="btn btn-ink" data-clear data-clear-focus>Clear all filters</button>
+        </div>
+        </div>
+
+        <div role="tabpanel" id="panel-past" aria-labelledby="tab-past" class="past" data-noun="past event" hidden>
+        <div class="month-group" data-group>
+          <p class="month">September 2026</p>
+          <article class="ev-card" data-item data-audience="college" data-type="cop" data-format="online">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-college">College</span><span class="tag tag-cop">Community of practice</span></div>
+              <h3>Assessment in the age of AI: what actually works</h3>
+              <p class="ev-meta"><span><time datetime="2026-09-16">Sep 16, 2026</time> · Live online</span><span>Recorded</span><span>Host: NAAIC</span></p>
+            </div>
+            <a href="#" class="rec"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg> Watch recording<span class="sr-only">: Assessment in the age of AI</span></a>
+          </article>
+        </div>
+        <div class="month-group" data-group>
+          <p class="month">August 2026</p>
+          <article class="ev-card" data-item data-audience="highschool" data-type="training" data-format="online">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-highschool">High school</span><span class="tag tag-training">Training</span></div>
+              <h3>Intro to machine learning for CTE pathways</h3>
+              <p class="ev-meta"><span><time datetime="2026-08-27">Aug 27, 2026</time> · Live online</span><span>Recorded</span><span>Host: NAAIC</span></p>
+            </div>
+            <a href="#" class="rec"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg> Watch recording<span class="sr-only">: Intro to machine learning for CTE pathways</span></a>
+          </article>
+        </div>
+        <div class="month-group" data-group>
+          <p class="month">March 2026</p>
+          <article class="ev-card" data-item data-audience="college" data-type="conference" data-format="inperson">
+            <div class="duo ev-thumb"><img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&amp;fit=crop&amp;w=360&amp;h=260&amp;q=70" alt="" width="132" height="92" loading="lazy"><div class="tint"></div></div>
+            <div>
+              <div class="ev-tags"><span class="tag tag-college">College</span><span class="tag tag-cop">Annual conference</span></div>
+              <h3>NAAIC AI Summit 2026</h3>
+              <p>Two days of keynotes and labs hosted at Miami Dade College.</p><p class="ev-meta"><span><time datetime="2026-03">Mar 2026</time> · In person</span><span>Miami, FL</span></p>
+            </div>
+            <a href="#" class="rec">View recap<span class="sr-only">: NAAIC AI Summit 2026</span> <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+        <div class="empty" data-empty>
+          <p class="empty-title">No events match these filters</p>
+          <p>Try removing a filter or searching for something broader.</p>
+          <button type="button" class="btn btn-ink" data-clear data-clear-focus>Clear all filters</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img src="img/brand/dark.svg" alt="NAAIC, National Applied AI Consortium" width="258" height="34"></a>
+        <p>National Applied AI Consortium. Building tomorrow's AI workforce, starting today.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-explore"><h2 id="f-explore">Explore</h2><ul><li><a href="#">About us</a></li><li><a href="resources.html">Resources</a></li><li><a href="events.html">Events</a></li><li><a href="#">News</a></li></ul></nav>
+      <nav class="footer-col" aria-labelledby="f-academia"><h2 id="f-academia">Academia</h2><ul><li><a href="#">Faculty</a></li><li><a href="#">Colleges</a></li><li><a href="#">High schools</a></li><li><a href="#">Strategic partners</a></li></ul></nav>
+      <nav class="footer-col" aria-labelledby="f-connect"><h2 id="f-connect">Connect</h2><ul><li><a href="#">Contact us</a></li><li><a href="#">Newsletter</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">YouTube</a></li></ul></nav>
+    </div>
+    <div class="support">
+      <div class="support-item">
+        <span class="support-label">Hosted by</span>
+        <a href="https://www.mdc.edu" class="support-chip"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b302d92c05e1b0e471e7b_MDC_logo-horiz.svg" alt="Miami Dade College" height="38"></a>
+      </div>
+      <div class="support-item">
+        <span class="support-label">Sponsored by</span>
+        <a href="https://www.nsf.gov" class="support-chip nsf"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b30438d2e4f8a2e7dbffc_NSF_logo.png" alt="U.S. National Science Foundation" height="44"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 National Applied AI Consortium</span>
+      <ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Accessibility statement</a></li></ul>
+    </div>
+  </div>
+  </footer>
+</body>
+</html>

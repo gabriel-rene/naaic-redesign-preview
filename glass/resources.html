@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Resource Hub — NAAIC</title>
+<meta name="description" content="Courses, Canvas shells, syllabi and toolkits for teaching applied AI.">
+<link rel="icon" href="img/brand/naaic-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-top">
+  <p class="preview-bar"><span class="spark" aria-hidden="true"></span>Design preview · Night glass direction · not the live site</p>
+  <div class="wrap">
+    <div class="site">
+      <a class="logo" href="index.html"><picture><source media="(max-width: 560px)" srcset="img/brand/dark-mobile.svg"><img src="img/brand/dark.svg" alt="NAAIC, National Applied AI Consortium, home" width="183" height="34"></picture></a>
+      <nav class="main" aria-label="Main"><ul><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html" aria-current="page">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul></nav>
+      <div class="head-actions">
+        <a class="btn btn-line-dark btn-sm signin" href="#">Sign in</a>
+        <a class="btn btn-aqua btn-sm join-top" href="index.html#join">Join NAAIC</a>
+        <button class="btn btn-line-dark btn-sm menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
+      </div>
+    </div>
+  </div>
+  <nav class="menu-panel" id="menu-panel" aria-label="Main" hidden><ul><li><a href="index.html">Home</a></li><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html" aria-current="page">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul><p class="menu-actions"><a class="btn btn-aqua" href="index.html#join">Join NAAIC</a><a class="btn btn-line-dark" href="#">Sign in</a></p></nav>
+</header>
+
+<main id="main">
+<div class="page-hero dark">
+  <div class="hero-art"><img src="img/3d/8-glass-band.jpg" alt="" width="1920" height="823" fetchpriority="high"></div>
+  <div class="wrap">
+    <div class="page-hero-body">
+      <h1>Resource Hub</h1>
+      <p class="lead">Courses, Canvas shells, syllabi and toolkits from NAAIC faculty and industry partners.</p>
+      <p class="lead" style="font-size:17px;display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span class="access open"><span class="spark" aria-hidden="true"></span>Open</span> free for everyone <span class="access edu"><span class="lock" aria-hidden="true"></span>EDU sign-in</span> needs a school email · <a class="tlink" href="#">Who can sign in?</a></p>
+    </div>
+  </div>
+</div>
+
+<section class="catalog" data-catalog data-noun="resources" aria-label="Resource listings">
+  <div class="wrap">
+    <div class="toolbar">
+      <div class="search">
+        <label class="sr" for="res-search">Search resources</label>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg>
+        <input id="res-search" type="search" placeholder="Search by title, topic or source" data-search>
+      </div>
+      <div class="sort"><label for="res-sort">Sort</label><select id="res-sort" data-sort><option value="new">Newest</option><option value="az">A to Z</option></select></div>
+      <button class="btn btn-line filters-toggle" type="button" aria-expanded="false" aria-controls="res-filters">Filters<span class="n"></span></button>
+    </div>
+    <div class="layout">
+      <form class="rail" id="res-filters" aria-label="Resource filters" onsubmit="return false">
+  <fieldset><legend>Access</legend><label class="check"><input type="checkbox" name="access" value="open"> Open to everyone <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="access" value="edu"> EDU sign-in <span class="count" aria-hidden="true"></span></label></fieldset>
+  <fieldset><legend>Audience</legend><label class="check"><input type="checkbox" name="audience" value="college"> College <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="audience" value="highschool"> High school <span class="count" aria-hidden="true"></span></label></fieldset>
+  <fieldset><legend>Format</legend><label class="check"><input type="checkbox" name="format" value="course"> Full course <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="format" value="shell"> Canvas shell <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="format" value="syllabus"> Syllabus <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="format" value="lesson"> Lesson <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="format" value="toolkit"> Toolkit <span class="count" aria-hidden="true"></span></label></fieldset>
+  <fieldset><legend>Topic</legend><label class="check"><input type="checkbox" name="topic" value="genai"> Generative AI <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="topic" value="ml"> Machine learning <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="topic" value="data"> Data <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="topic" value="ethics"> Ethics <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="topic" value="vision"> Computer vision <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="topic" value="security"> Cybersecurity <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="topic" value="accessibility"> Accessibility <span class="count" aria-hidden="true"></span></label></fieldset>
+  <fieldset><legend>Source</legend><label class="check"><input type="checkbox" name="source" value="mdc"> Miami Dade College <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="source" value="naaic"> NAAIC Faculty Network <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="source" value="microsoft"> Microsoft <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="source" value="intel"> Intel <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="source" value="ibm"> IBM SkillsBuild <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="source" value="google"> Google <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="source" value="eccouncil"> EC-Council <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="source" value="dayofai"> Day of AI <span class="count" aria-hidden="true"></span></label></fieldset>
+  <div class="rail-actions"><button class="btn btn-line btn-sm" type="button" data-clear>Clear all filters</button></div>
+</form>
+      <div>
+        <h2 class="sr">Results</h2>
+        <div class="results-head"><p class="results-count" data-count aria-live="polite"></p></div>
+        <ul class="res-grid" data-sortable>
+<li data-item data-access="open" data-audience="college" data-format="shell" data-topic="ml" data-source="mdc" data-date="2026-09-20">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/9-glass-arms.jpg" alt="" loading="lazy" style="object-position:50% 30%"><span class="fmt" aria-hidden="true">Full semester</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Introduction to Machine Learning</a></h3>
+      <p class="src">Canvas shell · Miami Dade College</p>
+      <p class="aud">College</p>
+      <div class="row"><span class="access open"><span class="spark" aria-hidden="true"></span>Open</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="edu" data-audience="college" data-format="course" data-topic="accessibility" data-source="intel" data-date="2026-09-12">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/8-glass-band.jpg" alt="" loading="lazy" style="object-position:88% 50%"><span class="fmt" aria-hidden="true">8 modules</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">AI for Accessibility</a></h3>
+      <p class="src">Full course · Intel Digital Readiness</p>
+      <p class="aud">College</p>
+      <div class="row"><span class="access edu"><span class="lock" aria-hidden="true"></span>EDU sign-in</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="open" data-audience="college highschool" data-format="syllabus" data-topic="ethics" data-source="naaic" data-date="2026-09-02">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/7-glass-sparkle.jpg" alt="" loading="lazy" style="object-position:66% 50%"><span class="fmt" aria-hidden="true">15 weeks</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Ethics and Society in the Age of AI</a></h3>
+      <p class="src">Syllabus · NAAIC Faculty Network</p>
+      <p class="aud">College and high school</p>
+      <div class="row"><span class="access open"><span class="spark" aria-hidden="true"></span>Open</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="edu" data-audience="college" data-format="course" data-topic="security" data-source="eccouncil" data-date="2026-08-28">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/1-frosted-glass.jpg" alt="" loading="lazy" style="object-position:62% 50%"><span class="fmt" aria-hidden="true">10 modules</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">AI in Cybersecurity Operations</a></h3>
+      <p class="src">Full course · EC-Council</p>
+      <p class="aud">College</p>
+      <div class="row"><span class="access edu"><span class="lock" aria-hidden="true"></span>EDU sign-in</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="open" data-audience="college highschool" data-format="toolkit" data-topic="vision" data-source="intel" data-date="2026-08-20">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/5-light-filaments.jpg" alt="" loading="lazy" style="object-position:62% 50%"><span class="fmt" aria-hidden="true">6 labs</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Computer Vision Starter Labs</a></h3>
+      <p class="src">Toolkit · Intel</p>
+      <p class="aud">College and high school</p>
+      <div class="row"><span class="access open"><span class="spark" aria-hidden="true"></span>Open</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="edu" data-audience="college" data-format="shell" data-topic="genai" data-source="mdc" data-date="2026-08-14">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/8-glass-band.jpg" alt="" loading="lazy" style="object-position:88% 50%"><span class="fmt" aria-hidden="true">Full semester</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Generative AI Across the Disciplines</a></h3>
+      <p class="src">Canvas shell · Miami Dade College</p>
+      <p class="aud">College</p>
+      <div class="row"><span class="access edu"><span class="lock" aria-hidden="true"></span>EDU sign-in</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="open" data-audience="highschool" data-format="lesson" data-topic="data" data-source="google" data-date="2026-08-02">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/7-glass-sparkle.jpg" alt="" loading="lazy" style="object-position:66% 50%"><span class="fmt" aria-hidden="true">90 minutes</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">AI and Climate: a Data Lesson</a></h3>
+      <p class="src">Lesson · Google</p>
+      <p class="aud">High school</p>
+      <div class="row"><span class="access open"><span class="spark" aria-hidden="true"></span>Open</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="edu" data-audience="college" data-format="course" data-topic="ml" data-source="ibm" data-date="2026-07-25">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/9-glass-arms.jpg" alt="" loading="lazy" style="object-position:50% 30%"><span class="fmt" aria-hidden="true">12 modules</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Applied Machine Learning for Business</a></h3>
+      <p class="src">Full course · IBM SkillsBuild</p>
+      <p class="aud">College</p>
+      <div class="row"><span class="access edu"><span class="lock" aria-hidden="true"></span>EDU sign-in</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="open" data-audience="college highschool" data-format="toolkit" data-topic="ethics" data-source="naaic" data-date="2026-07-18">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/1-frosted-glass.jpg" alt="" loading="lazy" style="object-position:62% 50%"><span class="fmt" aria-hidden="true">Toolkit</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Responsible AI Teaching Toolkit</a></h3>
+      <p class="src">Toolkit · NAAIC Faculty Network</p>
+      <p class="aud">College and high school</p>
+      <div class="row"><span class="access open"><span class="spark" aria-hidden="true"></span>Open</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="open" data-audience="highschool" data-format="lesson" data-topic="genai" data-source="dayofai" data-date="2026-07-10">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/5-light-filaments.jpg" alt="" loading="lazy" style="object-position:62% 50%"><span class="fmt" aria-hidden="true">5 lessons</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Day of AI: AI Literacy Unit</a></h3>
+      <p class="src">Lesson · Day of AI</p>
+      <p class="aud">High school</p>
+      <div class="row"><span class="access open"><span class="spark" aria-hidden="true"></span>Open</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="edu" data-audience="college" data-format="course" data-topic="data" data-source="microsoft" data-date="2026-06-30">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/9-glass-arms.jpg" alt="" loading="lazy" style="object-position:50% 30%"><span class="fmt" aria-hidden="true">14 modules</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Data Analytics with Python</a></h3>
+      <p class="src">Full course · Microsoft</p>
+      <p class="aud">College</p>
+      <div class="row"><span class="access edu"><span class="lock" aria-hidden="true"></span>EDU sign-in</span></div>
+    </div>
+  </article>
+</li>
+<li data-item data-access="open" data-audience="college highschool" data-format="lesson" data-topic="genai" data-source="microsoft" data-date="2026-06-21">
+  <article class="rcard">
+    <div class="rcard-art"><img src="img/3d/8-glass-band.jpg" alt="" loading="lazy" style="object-position:88% 50%"><span class="fmt" aria-hidden="true">60 minutes</span></div>
+    <div class="rcard-body">
+      <h3><a href="#">Prompting for Teachers</a></h3>
+      <p class="src">Lesson · Microsoft</p>
+      <p class="aud">College and high school</p>
+      <div class="row"><span class="access open"><span class="spark" aria-hidden="true"></span>Open</span></div>
+    </div>
+  </article>
+</li>
+        </ul>
+        <div class="empty" data-empty>
+          <h3>No resources match these filters.</h3>
+          <p>Try fewer filters or a different search.</p>
+          <button class="btn btn-aqua" type="button" data-clear>Clear all filters</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="img/brand/dark.svg" alt="NAAIC, National Applied AI Consortium" width="183" height="34" style="height:34px;width:auto">
+        <div class="hosted">
+          <span class="hb"><span>Hosted by</span><span class="chip-logo"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b302d92c05e1b0e471e7b_MDC_logo-horiz.svg" alt="Miami Dade College"></span></span>
+          <span class="hb"><span>Sponsored by</span><span class="chip-logo"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b30438d2e4f8a2e7dbffc_NSF_logo.png" alt="U.S. National Science Foundation"></span></span>
+        </div>
+      </div>
+      <nav aria-label="Explore"><h2>Explore</h2><ul><li><a href="resources.html">Resources</a></li><li><a href="events.html">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul></nav>
+      <nav aria-label="Academia"><h2>Academia</h2><ul><li><a href="#">Colleges</a></li><li><a href="#">Faculty</a></li><li><a href="#">High schools</a></li><li><a href="#">BILT</a></li></ul></nav>
+      <nav aria-label="About"><h2>About</h2><ul><li><a href="#">About NAAIC</a></li><li><a href="#">Partners</a></li><li><a href="#">Contact</a></li><li><a href="#">Accessibility statement</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom"><span>© 2026 NAAIC. All rights reserved.</span><span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Accessibility statement</a></span></div>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
