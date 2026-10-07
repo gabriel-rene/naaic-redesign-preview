@@ -113,6 +113,24 @@ nav.main a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--aqua); border
 .finder-go { display: flex; align-items: center; gap: 24px; margin-top: 28px; flex-wrap: wrap; }
 .finder-go .tlink { font-size: 16px; }
 
+/* Light hero option (index-light.html) — same layout, light glass render */
+.preview-bar:has(.hero-switch) { flex-wrap: wrap; column-gap: 8px; row-gap: 2px; }
+.preview-bar .hero-switch { display: inline-flex; gap: 6px; align-items: center; }
+.preview-bar .hero-switch .sep { margin-right: 2px; }
+.preview-bar .hero-switch a { color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; display: inline-flex; align-items: center; min-height: 24px; }
+.preview-bar .hero-switch [aria-current] { font-weight: 700; }
+.site-top.on-light { color: var(--ink); }
+.site-top.on-light :focus-visible { outline-color: var(--blue); }
+.on-light nav.main a { color: var(--text-soft); }                                    /* 9.0:1 on white */
+.on-light nav.main a:hover, .on-light nav.main a[aria-current="page"] { color: var(--ink); background: rgba(13,24,44,.06); }
+.hero.light { background: #f4f7fc; color: var(--ink); border-bottom: 1px solid var(--line); }
+.hero.light :focus-visible { outline-color: var(--blue); }
+.hero.light .hero-art::before { background: linear-gradient(180deg, rgba(244,247,252,.95) 0%, rgba(244,247,252,0) 100%); }
+.hero.light .hero-art::after { background: linear-gradient(90deg, #f4f7fc 0%, rgba(244,247,252,.9) 34%, rgba(244,247,252,0) 62%); }
+.hero.light .hero-kick { color: var(--blue); }                                      /* 7.2:1 on #f4f7fc */
+.hero.light h1 { color: var(--ink); }
+.hero.light .hero-lead { color: var(--text-soft); }                                 /* 8.6:1 */
+
 /* ---------- Page hero (inner pages) ---------- */
 .page-hero { position: relative; overflow: hidden; isolation: isolate; }
 .page-hero .hero-art::after { background: linear-gradient(90deg, var(--ink) 0%, rgba(13,24,44,.94) 42%, rgba(13,24,44,.15) 78%); }
@@ -313,7 +331,7 @@ footer li a:hover { color: var(--white); text-decoration: underline; }
   nav.main { display: none; }
   .menu-btn { display: inline-flex; }
   .head-actions { margin-left: auto; }
-  .menu-panel:not([hidden]) { display: block; position: absolute; top: 112px; left: 0; right: 0; z-index: var(--z-menu); background: var(--ink); border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); padding: 8px var(--gutter) 20px; }
+  .menu-panel:not([hidden]) { display: block; position: absolute; top: 100%; left: 0; right: 0; z-index: var(--z-menu); background: var(--ink); border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); padding: 8px var(--gutter) 20px; }
   .menu-panel ul { list-style: none; }
   .menu-panel a { display: flex; align-items: center; min-height: 52px; font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--white); text-decoration: none; border-bottom: 1px solid var(--line-dark); }
   .menu-panel a[aria-current="page"] { color: var(--aqua-text); }
@@ -329,6 +347,7 @@ footer li a:hover { color: var(--white); text-decoration: underline; }
   .hero-art img { object-position: 72% 40%; height: 340px; }
   .hero-art::after { background: linear-gradient(180deg, rgba(13,24,44,.1) 0, rgba(13,24,44,.45) 220px, var(--ink) 340px); }
   .hero-body { padding-top: 350px; padding-bottom: 72px; min-height: 0; }
+  .hero.light .hero-art::after { background: linear-gradient(180deg, rgba(244,247,252,0) 0, rgba(244,247,252,.5) 220px, #f4f7fc 340px); }
   .page-hero .hero-art::after, .band-art::after, .join .band-art::after { background: rgba(13,24,44,.9); }
   .layout { grid-template-columns: 1fr; gap: 0; }
   .filters-toggle { display: inline-flex; }
@@ -340,8 +359,10 @@ footer li a:hover { color: var(--white); text-decoration: underline; }
   .head-actions .join-top { display: none; }
   .site { gap: 12px; }
   .logo img { height: 32px; }
-  .menu-panel:not([hidden]) { top: 128px; }
   .head-actions .signin { display: none; }
+  .preview-bar .hero-switch { flex-basis: 100%; justify-content: center; }
+  .preview-bar .hero-switch .sep { display: none; }
+  .preview-bar:has(.hero-switch) > .spark { display: none; }
   .ledger div { grid-template-columns: 110px 1fr; }
   .ledger dt { font-size: 28px; }
   .quote { grid-template-columns: 1fr; gap: 16px; }
