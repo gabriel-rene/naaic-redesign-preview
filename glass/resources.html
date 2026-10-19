@@ -8,9 +8,9 @@
 <meta name="description" content="Courses, Canvas shells, syllabi and toolkits for teaching applied AI.">
 <link rel="icon" href="img/brand/naaic-icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=2">
+<link rel="stylesheet" href="css/site.css?v=3">
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-top">
   <p class="preview-bar"><span class="spark" aria-hidden="true"></span>Design preview · Night glass direction · not the live site</p>
@@ -20,12 +20,12 @@
       <nav class="main" aria-label="Main"><ul><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html" aria-current="page">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul></nav>
       <div class="head-actions">
         <a class="btn btn-line-dark btn-sm signin" href="#">Sign in</a>
-        <a class="btn btn-aqua btn-sm join-top" href="index.html#join">Join NAAIC</a>
+        <button class="btn btn-aqua btn-sm join-top" type="button" data-subscribe>Subscribe</button>
         <button class="btn btn-line-dark btn-sm menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
       </div>
     </div>
   </div>
-  <nav class="menu-panel" id="menu-panel" aria-label="Main" hidden><ul><li><a href="index.html">Home</a></li><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html" aria-current="page">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul><p class="menu-actions"><a class="btn btn-aqua" href="index.html#join">Join NAAIC</a><a class="btn btn-line-dark" href="#">Sign in</a></p></nav>
+  <nav class="menu-panel" id="menu-panel" aria-label="Main" hidden><ul><li><a href="index.html">Home</a></li><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html" aria-current="page">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul><p class="menu-actions"><button class="btn btn-aqua" type="button" data-subscribe>Subscribe</button><a class="btn btn-line-dark" href="#">Sign in</a></p></nav>
 </header>
 
 <main id="main">
@@ -210,20 +210,42 @@
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <img src="img/brand/dark.svg" alt="NAAIC, National Applied AI Consortium" width="183" height="34" style="height:34px;width:auto">
-        <div class="hosted">
-          <span class="hb"><span>Hosted by</span><span class="chip-logo"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b302d92c05e1b0e471e7b_MDC_logo-horiz.svg" alt="Miami Dade College"></span></span>
-          <span class="hb"><span>Sponsored by</span><span class="chip-logo"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b30438d2e4f8a2e7dbffc_NSF_logo.png" alt="U.S. National Science Foundation"></span></span>
-        </div>
+      <div class="foot-brand">
+        <img src="img/brand/dark.svg" alt="NAAIC, National Applied AI Consortium" width="183" height="34">
+        <p>Building tomorrow's AI workforce, starting today.</p>
       </div>
-      <nav aria-label="Explore"><h2>Explore</h2><ul><li><a href="resources.html">Resources</a></li><li><a href="events.html">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul></nav>
-      <nav aria-label="Academia"><h2>Academia</h2><ul><li><a href="#">Colleges</a></li><li><a href="#">Faculty</a></li><li><a href="#">High schools</a></li><li><a href="#">BILT</a></li></ul></nav>
-      <nav aria-label="About"><h2>About</h2><ul><li><a href="#">About NAAIC</a></li><li><a href="#">Partners</a></li><li><a href="#">Contact</a></li><li><a href="#">Accessibility statement</a></li></ul></nav>
+      <nav aria-labelledby="f-explore"><h2 id="f-explore">Explore</h2><ul><li><a href="#">About us</a></li><li><a href="resources.html">Resource Hub</a></li><li><a href="events.html">Events</a></li><li><a href="#">News</a></li></ul></nav>
+      <nav aria-labelledby="f-academia"><h2 id="f-academia">Academia</h2><ul><li><a href="#">Faculty</a></li><li><a href="#">Colleges</a></li><li><a href="#">High schools</a></li><li><a href="#">Strategic partners</a></li></ul></nav>
+      <nav aria-labelledby="f-connect"><h2 id="f-connect">Connect</h2><ul><li><a href="#">Contact us</a></li><li><button class="foot-btn" type="button" data-subscribe>Newsletter</button></li><li><a href="#">LinkedIn</a></li><li><a href="#">YouTube</a></li></ul></nav>
     </div>
-    <div class="foot-bottom"><span>© 2026 NAAIC. All rights reserved.</span><span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Accessibility statement</a></span></div>
+    <div class="support">
+      <div class="support-item">
+        <span class="support-label">Hosted by</span>
+        <a class="chip-logo" href="https://www.mdc.edu"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b302d92c05e1b0e471e7b_MDC_logo-horiz.svg" alt="Miami Dade College"></a>
+      </div>
+      <div class="support-item">
+        <a class="support-label support-link" href="#">Sponsored by<span class="sr"> — see all current funders</span></a>
+        <a class="chip-logo" href="https://www.nsf.gov"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b30438d2e4f8a2e7dbffc_NSF_logo.png" alt="U.S. National Science Foundation"></a>
+        <a class="chip-logo" href="#"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/688bacc662a9f0db0768c68c_Google%20Logo%20(1)-p-1080.png" alt="Google"></a>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 National Applied AI Consortium</span><span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Accessibility statement</a></span></div>
   </div>
 </footer>
-<script src="js/site.js?v=2"></script>
+<dialog class="subscribe" id="subscribe" aria-labelledby="sub-h">
+  <form class="sub-form" method="dialog" data-sub-form>
+    <button class="sub-close" type="submit" value="close" formnovalidate aria-label="Close">×</button>
+    <h2 id="sub-h">Get the Consortium in your inbox.</h2>
+    <p>News, events and new resources from NAAIC.</p>
+    <label for="sub-email">Email address</label>
+    <div class="sub-row">
+      <input id="sub-email" autofocus type="email" name="email" autocomplete="email" required placeholder="you@college.edu">
+      <button class="btn btn-aqua" type="submit" value="subscribe">Subscribe</button>
+    </div>
+    <p class="sub-status" role="status" data-sub-status></p>
+  </form>
+</dialog>
+<a class="to-top" href="#top" data-to-top><span aria-hidden="true">↑</span><span class="sr">Back to top</span></a>
+<script src="js/site.js?v=3"></script>
 </body>
 </html>

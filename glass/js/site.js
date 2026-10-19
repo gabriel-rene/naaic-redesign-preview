@@ -18,18 +18,27 @@
     window.addEventListener('resize', function () { if (window.innerWidth > 1080) setMenu(false); });
   }
 
-  /* ---------- Home finder: role + need -> page ---------- */
-  var finder = document.querySelector('form.finder');
+  /* ---------- Home finder: role -> its own "looking for" list -> page (client sheet) ---------- */
+  var finder = document.querySelector('form[data-finder]');
   if (finder) {
+    var map = JSON.parse(finder.getAttribute('data-finder'));
+    var roleSel = finder.querySelector('#role');
+    var needSel = finder.querySelector('#need');
+    var fill = function () {
+      needSel.innerHTML = '';
+      (map[roleSel.value] || []).forEach(function (o) {
+        var opt = document.createElement('option');
+        opt.textContent = o[0]; opt.value = o[1];
+        needSel.appendChild(opt);
+      });
+    };
+    roleSel.addEventListener('change', fill);
+    fill();
     finder.addEventListener('submit', function (e) {
       e.preventDefault();
-      var role = finder.querySelector('#role').value;
-      var need = finder.querySelector('#need').value;
-      var audience = role === 'highschool' ? 'highschool' : 'college';
-      var url = 'resources.html?audience=' + audience;
-      if (need === 'events') url = 'events.html?audience=' + audience;
-      if (need === 'training') url = 'events.html?type=training&audience=' + audience;
-      window.location.href = url;
+      var url = needSel.value;
+      if (url && url !== '#') window.location.href = url;
+      else alert('This page is new in the redesign and is not built yet.');
     });
   }
 
@@ -138,33 +147,92 @@
     apply();
   }
 
-  /* ---------- Home map (sample shading) ---------- */
+  /* ---------- Home map (sample shading + lead-college stars) ---------- */
   var mapEl = document.getElementById('map');
   if (mapEl && window.d3 && window.topojson) {
-    var tiers = ['#c9d6ea', '#8fa6cf', '#5675b0', '#2d5195', '#1a365d'];
+    var tiers = ['#9fb6de', '#6e8fca', '#4468ad', '#2a4a8a', '#0d182c'];
     fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-albers-10m.json').then(function (r) { return r.json(); }).then(function (us) {
       var states = topojson.feature(us, us.objects.states).features;
       var svg = d3.select(mapEl).append('svg').attr('viewBox', '0 0 975 610').attr('aria-hidden', 'true').attr('focusable', 'false');
       var path = d3.geoPath();
-      var big = ['Florida','California','Texas','New York','Illinois','North Carolina','Ohio','Pennsylvania','Michigan','Arizona','Georgia','Washington'];
+      var top = ['Florida', 'Texas', 'Arizona', 'California'];
+      var big = ['New York','Illinois','North Carolina','Ohio','Pennsylvania','Michigan','Georgia','Washington'];
       svg.append('g').selectAll('path').data(states).join('path')
         .attr('d', path)
-        .attr('fill', function (d) { var n = d.properties.name; if (n === 'Florida') return tiers[4]; if (big.indexOf(n) > -1) return tiers[3]; return tiers[(n.length * 7) % 3]; })
-        .attr('stroke', '#f1f5fb').attr('stroke-width', 1.2);
-      var place = function () {
-        var fl = states.filter(function (s) { return s.properties.name === 'Florida'; })[0];
-        var b = path.bounds(fl);
-        var card = mapEl.closest('.map-card').getBoundingClientRect();
-        var box = mapEl.querySelector('svg').getBoundingClientRect();
-        var k = box.width / 975;
-        var pin = document.getElementById('pin');
-        var x = (box.left - card.left) + (b[1][0] - 18) * k;
-        var y = (box.top - card.top) + (b[1][1] - 34) * k;
-        pin.style.left = Math.max(8, x - pin.offsetWidth + 14) + 'px';
-        pin.style.top = (y - 36) + 'px';
+        .attr('fill', function (d) { var n = d.properties.name; if (top.indexOf(n) > -1) return tiers[4]; if (big.indexOf(n) > -1) return tiers[3]; return tiers[(n.length * 7) % 3]; })
+        .attr('stroke', '#ffffff').attr('stroke-width', 1.2);
+      // Same projection us-atlas used to pre-project states-albers-10m (975 x 610).
+      var proj = d3.geoAlbersUsa().scale(1300).translate([487.5, 305]);
+      var leads = [[-80.37, 25.75], [-95.37, 29.76], [-111.93, 33.42]];   // MDC, HCC, MCCCD
+      var star = function (cx, cy, R) {
+        var pts = [];
+        for (var i = 0; i < 10; i++) {
+          var r = i % 2 ? R * 0.45 : R, a = Math.PI / 5 * i - Math.PI / 2;
+          pts.push((cx + r * Math.cos(a)).toFixed(1) + ',' + (cy + r * Math.sin(a)).toFixed(1));
+        }
+        return pts.join(' ');
       };
-      place();
-      window.addEventListener('resize', place);
+      svg.append('g').selectAll('polygon').data(leads).join('polygon')
+        .attr('class', 'map-star')
+        .attr('points', function (d) { var p = proj(d); return star(p[0], p[1], 22); });
     });
+  }
+
+  /* ---------- Quote carousel (WCAG 2.2.2: pause control; stops on hover/focus) ---------- */
+  var car = document.querySelector('[data-carousel]');
+  if (car) {
+    var slides = Array.prototype.slice.call(car.querySelectorAll('.slide'));
+    var live = car.querySelector('[data-slides]');
+    var pauseBtn = car.querySelector('[data-pause]');
+    var cur = 0, timer = null, userPaused = false;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var show = function (i) { cur = (i + slides.length) % slides.length; slides.forEach(function (s, j) { s.hidden = j !== cur; }); };
+    var stop = function () { clearInterval(timer); timer = null; };
+    var start = function () { if (!userPaused && !reduce && !timer) timer = setInterval(function () { show(cur + 1); }, 8000); };
+    var manual = function (i) { live.setAttribute('aria-live', 'polite'); show(i); };
+    car.querySelector('[data-prev]').addEventListener('click', function () { manual(cur - 1); });
+    car.querySelector('[data-next]').addEventListener('click', function () { manual(cur + 1); });
+    var setPaused = function (p) { userPaused = p; pauseBtn.setAttribute('aria-pressed', String(p)); pauseBtn.textContent = p ? 'Play' : 'Pause'; if (p) stop(); else start(); };
+    pauseBtn.addEventListener('click', function () { setPaused(!userPaused); });
+    if (reduce) { pauseBtn.hidden = true; }
+    car.addEventListener('mouseenter', stop); car.addEventListener('mouseleave', start);
+    car.addEventListener('focusin', stop); car.addEventListener('focusout', function (e) { if (!car.contains(e.relatedTarget)) start(); });
+    start();
+  }
+
+  /* ---------- Partner logo marquee pause ---------- */
+  var mq = document.querySelector('[data-marquee]');
+  var mqBtn = document.querySelector('[data-marquee-pause]');
+  if (mq && mqBtn) {
+    mqBtn.addEventListener('click', function () {
+      var p = !mq.classList.contains('paused');
+      mq.classList.toggle('paused', p);
+      mqBtn.setAttribute('aria-pressed', String(p));
+      mqBtn.textContent = p ? 'Play' : 'Pause';
+    });
+  }
+
+  /* ---------- Subscribe dialog (header + hero + footer open it) ---------- */
+  var dlg = document.getElementById('subscribe');
+  if (dlg && dlg.showModal) {
+    var status = dlg.querySelector('[data-sub-status]');
+    Array.prototype.forEach.call(document.querySelectorAll('[data-subscribe]'), function (b) {
+      b.addEventListener('click', function () { status.textContent = ''; dlg.showModal(); });
+    });
+    dlg.querySelector('[data-sub-form]').addEventListener('submit', function (e) {
+      if (e.submitter && e.submitter.value === 'subscribe') {
+        e.preventDefault();
+        status.textContent = 'Preview only: in the build this adds you to the NAAIC newsletter.';
+      }
+    });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  }
+
+  /* ---------- Back to top ---------- */
+  var toTop = document.querySelector('[data-to-top]');
+  if (toTop) {
+    var onScroll = function () { toTop.classList.toggle('show', window.scrollY > 700); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 })();

@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Events — NAAIC</title>
-<meta name="description" content="Training, webinars, communities of practice and the NAAIC AI Summit.">
+<meta name="description" content="Training, webinars and communities of practice for AI educators.">
 <link rel="icon" href="img/brand/naaic-icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=2">
+<link rel="stylesheet" href="css/site.css?v=3">
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-top">
   <p class="preview-bar"><span class="spark" aria-hidden="true"></span>Design preview · Night glass direction · not the live site</p>
@@ -20,12 +20,12 @@
       <nav class="main" aria-label="Main"><ul><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html" aria-current="page">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul></nav>
       <div class="head-actions">
         <a class="btn btn-line-dark btn-sm signin" href="#">Sign in</a>
-        <a class="btn btn-aqua btn-sm join-top" href="index.html#join">Join NAAIC</a>
+        <button class="btn btn-aqua btn-sm join-top" type="button" data-subscribe>Subscribe</button>
         <button class="btn btn-line-dark btn-sm menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
       </div>
     </div>
   </div>
-  <nav class="menu-panel" id="menu-panel" aria-label="Main" hidden><ul><li><a href="index.html">Home</a></li><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html" aria-current="page">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul><p class="menu-actions"><a class="btn btn-aqua" href="index.html#join">Join NAAIC</a><a class="btn btn-line-dark" href="#">Sign in</a></p></nav>
+  <nav class="menu-panel" id="menu-panel" aria-label="Main" hidden><ul><li><a href="index.html">Home</a></li><li><a href="#">About</a></li><li><a href="#">Academia</a></li><li><a href="resources.html">Resources</a></li><li><a href="#">Partners</a></li><li><a href="events.html" aria-current="page">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul><p class="menu-actions"><button class="btn btn-aqua" type="button" data-subscribe>Subscribe</button><a class="btn btn-line-dark" href="#">Sign in</a></p></nav>
 </header>
 
 <main id="main">
@@ -34,7 +34,7 @@
   <div class="wrap">
     <div class="page-hero-body">
       <h1>Events</h1>
-      <p class="lead">Training, webinars and communities of practice for AI educators. All times are Eastern Time.</p>
+      <p class="lead">Training, webinars and communities of practice for AI educators.</p>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@
     <article class="feature" aria-labelledby="summit-h">
       <div class="feature-art"><img src="img/3d/9-glass-arms.jpg" alt="" loading="lazy" width="1920" height="1920"></div>
       <div class="feature-body">
-        <p class="mono kick"><span class="spark" aria-hidden="true"></span>Flagship event</p>
+        <div class="tags"><span class="tag type-summit summit-on-dark">Summit</span><span class="tag aud-college">College</span><span class="tag aud-highschool">High school</span></div>
         <h2 id="summit-h">NAAIC AI Summit 2027</h2>
         <p>Faculty, college leaders and industry partners from across the country, together in Miami. Dates coming soon.</p>
         <div class="actions"><a class="btn btn-aqua" href="#">Get notified <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn-line-dark" href="#">See past Summits</a></div>
@@ -63,8 +63,9 @@
     <div class="layout">
       <form class="rail" id="event-filters" aria-label="Event filters" onsubmit="return false">
   <fieldset><legend>Audience</legend><label class="check"><input type="checkbox" name="audience" value="college"> College <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="audience" value="highschool"> High school <span class="count" aria-hidden="true"></span></label></fieldset>
-  <fieldset><legend>Type</legend><label class="check"><input type="checkbox" name="type" value="webinar"> Webinar <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="type" value="training"> Training <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="type" value="cop"> Community of practice <span class="count" aria-hidden="true"></span></label></fieldset>
-  <fieldset><legend>Partner</legend><label class="check"><input type="checkbox" name="partner" value="naaic"> NAAIC <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="ibm"> IBM SkillsBuild <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="microsoft"> Microsoft <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="intel"> Intel <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="comptia"> CompTIA <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="dayofai"> Day of AI <span class="count" aria-hidden="true"></span></label></fieldset>
+  <fieldset><legend>Type</legend><label class="check"><input type="checkbox" name="type" value="webinar"> Info session / webinar <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="type" value="training"> Training <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="type" value="cop"> Community of practice <span class="count" aria-hidden="true"></span></label></fieldset>
+  <fieldset><legend>Format</legend><label class="check"><input type="checkbox" name="format" value="online"> Live online <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="format" value="inperson"> In person <span class="count" aria-hidden="true"></span></label></fieldset>
+  <fieldset><legend>Partner</legend><label class="check"><input type="checkbox" name="partner" value="naaic"> NAAIC <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="ibm"> IBM SkillsBuild <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="intel"> Intel <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="comptia"> CompTIA <span class="count" aria-hidden="true"></span></label><label class="check"><input type="checkbox" name="partner" value="dayofai"> Day of AI <span class="count" aria-hidden="true"></span></label></fieldset>
   <div class="rail-actions"><button class="btn btn-line btn-sm" type="button" data-clear>Clear all filters</button></div>
 </form>
       <div>
@@ -72,87 +73,97 @@
           <button class="tab" role="tab" id="tab-up" aria-selected="true" aria-controls="panel-up" type="button">Upcoming</button>
           <button class="tab" role="tab" id="tab-past" aria-selected="false" aria-controls="panel-past" tabindex="-1" type="button">Past and recordings</button>
         </div>
-        <div class="results-head"><p class="results-count" data-count aria-live="polite"></p></div>
+        <div class="results-head"><p class="results-count" data-count aria-live="polite"></p><p class="tz">All times are Eastern Time.</p></div>
         <div role="tabpanel" id="panel-up" aria-labelledby="tab-up" class="cat-events">
-<div data-group><h3 class="month">October 2026</h3><ol class="events"><li class="event" data-item data-audience="college" data-type="webinar" data-partner="ibm">
-  <p class="date"><span class="m">OCT</span><span class="d">06</span><span class="sr"> 2026</span></p>
+<div data-group><h3 class="month">October 2026</h3><ol class="hev-list cat-list"><li class="hev ev" data-item data-audience="college" data-type="webinar" data-format="online" data-partner="ibm">
+  <p class="hev-date"><span class="m">OCT</span><span class="d">20</span><span class="sr"> 2026</span></p>
   <div>
-    <h3><a href="#">IBM SkillsBuild AI in Healthcare: Turn Patient Feedback Into Better Care</a></h3>
-    <div class="meta"><span>IBM SkillsBuild</span><span>Live online</span><span class="chip">College</span><span class="chip">Webinar</span></div>
+    <div class="tags"><span class="tag aud-college">College</span><span class="tag type-webinar">Info session / webinar</span></div>
+    <h3><a href="#">IBM SkillsBuild: Build an AI Project That Makes Your Resume Stand Out</a></h3>
+    <p class="ev-desc">Build a small, real AI project with IBM SkillsBuild tools that students can show to employers.</p>
+    <p class="hev-meta"><span>IBM SkillsBuild</span><span>Live online</span><span>1:00–2:00 PM ET</span></p>
   </div>
-  <a class="btn btn-aqua" href="#">Register<span class="sr"> for IBM SkillsBuild AI in Healthcare: Turn Patient Feedback Into Better Care</span></a>
+  <a class="btn btn-aqua" href="#">Register<span class="sr"> for IBM SkillsBuild: Build an AI Project That Makes Your Resume Stand Out</span></a>
 </li>
-<li class="event" data-item data-audience="highschool" data-type="training" data-partner="dayofai">
-  <p class="date"><span class="m">OCT</span><span class="d">06</span><span class="sr"> 2026</span></p>
+<li class="hev ev" data-item data-audience="college highschool" data-type="training" data-format="online" data-partner="comptia">
+  <p class="hev-date"><span class="m">OCT</span><span class="d">26</span><span class="sr"> 2026</span></p>
   <div>
-    <h3><a href="#">Curriculum Deep-Dives with Day of AI</a></h3>
-    <div class="meta"><span>Day of AI</span><span>Live online</span><span class="chip">High school</span><span class="chip">Training</span></div>
+    <div class="tags"><span class="tag aud-college">College</span><span class="tag aud-highschool">High school</span><span class="tag type-training">Training</span></div>
+    <h3><a href="#">CompTIA AI Fundamentals for High School and College Faculty</a></h3>
+    <p class="ev-desc">An instructor session on the CompTIA AI Fundamentals course, with classroom materials and exam prep.</p>
+    <p class="hev-meta"><span>CompTIA</span><span>Live online</span><span>12:00–3:00 PM ET</span></p>
   </div>
-  <a class="btn btn-aqua" href="#">Register<span class="sr"> for Curriculum Deep-Dives with Day of AI</span></a>
+  <a class="btn btn-aqua" href="#">Register<span class="sr"> for CompTIA AI Fundamentals for High School and College Faculty</span></a>
 </li>
-<li class="event" data-item data-audience="college" data-type="cop" data-partner="naaic">
-  <p class="date"><span class="m">OCT</span><span class="d">09</span><span class="sr"> 2026</span></p>
+<li class="hev ev" data-item data-audience="college" data-type="webinar" data-format="online" data-partner="ibm">
+  <p class="hev-date"><span class="m">OCT</span><span class="d">27</span><span class="sr"> 2026</span></p>
   <div>
-    <h3><a href="#">Community of Practice: AI in Manufacturing</a></h3>
-    <div class="meta"><span>NAAIC</span><span>Live online</span><span class="chip">College</span><span class="chip">Community of practice</span></div>
+    <div class="tags"><span class="tag aud-college">College</span><span class="tag type-webinar">Info session / webinar</span></div>
+    <h3><a href="#">IBM SkillsBuild AI in Education: Build AI Tools That Adapt to How Students Learn</a></h3>
+    <p class="ev-desc">See how to build simple AI tools that adapt to each student&#x27;s pace and learning style.</p>
+    <p class="hev-meta"><span>IBM SkillsBuild</span><span>Live online</span><span>1:00–2:00 PM ET</span></p>
   </div>
-  <a class="btn btn-aqua" href="#">Register<span class="sr"> for Community of Practice: AI in Manufacturing</span></a>
-</li>
-<li class="event" data-item data-audience="college highschool" data-type="training" data-partner="microsoft">
-  <p class="date"><span class="m">OCT</span><span class="d">22</span><span class="sr"> 2026</span></p>
-  <div>
-    <h3><a href="#">Microsoft Elevate for Educators: Copilot in the Classroom</a></h3>
-    <div class="meta"><span>Microsoft</span><span>Live online</span><span class="chip">College</span><span class="chip">High school</span><span class="chip">Training</span></div>
-  </div>
-  <a class="btn btn-aqua" href="#">Register<span class="sr"> for Microsoft Elevate for Educators: Copilot in the Classroom</span></a>
+  <a class="btn btn-aqua" href="#">Register<span class="sr"> for IBM SkillsBuild AI in Education: Build AI Tools That Adapt to How Students Learn</span></a>
 </li></ol></div>
-<div data-group><h3 class="month">November 2026</h3><ol class="events"><li class="event" data-item data-audience="college" data-type="training" data-partner="intel">
-  <p class="date"><span class="m">NOV</span><span class="d">05</span><span class="sr"> 2026</span></p>
+<div data-group><h3 class="month">November 2026</h3><ol class="hev-list cat-list"><li class="hev ev" data-item data-audience="college" data-type="training" data-format="inperson" data-partner="intel">
+  <p class="hev-date"><span class="m">NOV</span><span class="d">05</span><span class="sr"> 2026</span></p>
   <div>
+    <div class="tags"><span class="tag aud-college">College</span><span class="tag type-training">Training</span></div>
     <h3><a href="#">Intel AI for Workforce: Faculty Bootcamp</a></h3>
-    <div class="meta"><span>Intel</span><span>Miami, FL</span><span class="chip">College</span><span class="chip">Training</span></div>
+    <p class="ev-desc">Two hands-on days with the Intel AI for Workforce curriculum and AI PC labs.</p>
+    <p class="hev-meta"><span>Intel</span><span>Miami, FL</span><span>9:00 AM–4:00 PM ET</span></p>
   </div>
   <a class="btn btn-aqua" href="#">Register<span class="sr"> for Intel AI for Workforce: Faculty Bootcamp</span></a>
 </li>
-<li class="event" data-item data-audience="college" data-type="webinar" data-partner="comptia">
-  <p class="date"><span class="m">NOV</span><span class="d">12</span><span class="sr"> 2026</span></p>
+<li class="hev ev" data-item data-audience="college" data-type="cop" data-format="online" data-partner="naaic">
+  <p class="hev-date"><span class="m">NOV</span><span class="d">06</span><span class="sr"> 2026</span></p>
   <div>
-    <h3><a href="#">CompTIA AI Essentials: Instructor Webinar</a></h3>
-    <div class="meta"><span>CompTIA</span><span>Live online</span><span class="chip">College</span><span class="chip">Webinar</span></div>
+    <div class="tags"><span class="tag aud-college">College</span><span class="tag type-cop">Community of practice</span></div>
+    <h3><a href="#">Community of Practice: AI in Manufacturing</a></h3>
+    <p class="ev-desc">Faculty compare notes on teaching applied AI in advanced manufacturing programs.</p>
+    <p class="hev-meta"><span>NAAIC</span><span>Live online</span><span>2:00–3:00 PM ET</span></p>
   </div>
-  <a class="btn btn-aqua" href="#">Register<span class="sr"> for CompTIA AI Essentials: Instructor Webinar</span></a>
+  <a class="btn btn-aqua" href="#">Register<span class="sr"> for Community of Practice: AI in Manufacturing</span></a>
 </li>
-<li class="event" data-item data-audience="highschool" data-type="cop" data-partner="naaic">
-  <p class="date"><span class="m">NOV</span><span class="d">19</span><span class="sr"> 2026</span></p>
+<li class="hev ev" data-item data-audience="highschool" data-type="cop" data-format="online" data-partner="naaic">
+  <p class="hev-date"><span class="m">NOV</span><span class="d">19</span><span class="sr"> 2026</span></p>
   <div>
+    <div class="tags"><span class="tag aud-highschool">High school</span><span class="tag type-cop">Community of practice</span></div>
     <h3><a href="#">Community of Practice: AI in High School Classrooms</a></h3>
-    <div class="meta"><span>NAAIC</span><span>Live online</span><span class="chip">High school</span><span class="chip">Community of practice</span></div>
+    <p class="ev-desc">High school teachers share AI lessons, projects and what works with students.</p>
+    <p class="hev-meta"><span>NAAIC</span><span>Live online</span><span>4:00–5:00 PM ET</span></p>
   </div>
   <a class="btn btn-aqua" href="#">Register<span class="sr"> for Community of Practice: AI in High School Classrooms</span></a>
 </li></ol></div>
         </div>
         <div role="tabpanel" id="panel-past" aria-labelledby="tab-past" class="cat-events" hidden>
-<div data-group><h3 class="month">September 2026</h3><ol class="events"><li class="event past" data-item data-audience="college" data-type="webinar" data-partner="ibm">
-  <p class="date"><span class="m">SEP</span><span class="d">24</span><span class="sr"> 2026</span></p>
+<div data-group><h3 class="month">September 2026</h3><ol class="hev-list cat-list"><li class="hev ev past" data-item data-audience="college" data-type="webinar" data-format="online" data-partner="ibm">
+  <p class="hev-date"><span class="m">SEP</span><span class="d">24</span><span class="sr"> 2026</span></p>
   <div>
+    <div class="tags"><span class="tag aud-college">College</span><span class="tag type-webinar">Info session / webinar</span></div>
     <h3><a href="#">IBM SkillsBuild: Generative AI for Educators</a></h3>
-    <div class="meta"><span>IBM SkillsBuild</span><span>Recorded</span><span class="chip">College</span><span class="chip">Webinar</span></div>
+    <p class="ev-desc">An introduction to generative AI tools for course design and assessment.</p>
+    <p class="hev-meta"><span>IBM SkillsBuild</span><span>Recorded</span></p>
   </div>
   <a class="btn btn-line" href="#">Watch recording<span class="sr"> of IBM SkillsBuild: Generative AI for Educators</span></a>
 </li>
-<li class="event past" data-item data-audience="college" data-type="cop" data-partner="naaic">
-  <p class="date"><span class="m">SEP</span><span class="d">17</span><span class="sr"> 2026</span></p>
+<li class="hev ev past" data-item data-audience="college" data-type="cop" data-format="online" data-partner="naaic">
+  <p class="hev-date"><span class="m">SEP</span><span class="d">17</span><span class="sr"> 2026</span></p>
   <div>
+    <div class="tags"><span class="tag aud-college">College</span><span class="tag type-cop">Community of practice</span></div>
     <h3><a href="#">Community of Practice: AI in Health Sciences</a></h3>
-    <div class="meta"><span>NAAIC</span><span>Recorded</span><span class="chip">College</span><span class="chip">Community of practice</span></div>
+    <p class="ev-desc">Faculty in nursing and allied health on teaching with and about AI.</p>
+    <p class="hev-meta"><span>NAAIC</span><span>Recorded</span></p>
   </div>
   <a class="btn btn-line" href="#">Watch recording<span class="sr"> of Community of Practice: AI in Health Sciences</span></a>
 </li>
-<li class="event past" data-item data-audience="highschool" data-type="training" data-partner="dayofai">
-  <p class="date"><span class="m">SEP</span><span class="d">10</span><span class="sr"> 2026</span></p>
+<li class="hev ev past" data-item data-audience="highschool" data-type="training" data-format="online" data-partner="dayofai">
+  <p class="hev-date"><span class="m">SEP</span><span class="d">10</span><span class="sr"> 2026</span></p>
   <div>
+    <div class="tags"><span class="tag aud-highschool">High school</span><span class="tag type-training">Training</span></div>
     <h3><a href="#">Day of AI: Teaching AI Literacy in Grades 9–12</a></h3>
-    <div class="meta"><span>Day of AI</span><span>Recorded</span><span class="chip">High school</span><span class="chip">Training</span></div>
+    <p class="ev-desc">Walk through Day of AI literacy units with the team that builds them.</p>
+    <p class="hev-meta"><span>Day of AI</span><span>Recorded</span></p>
   </div>
   <a class="btn btn-line" href="#">Watch recording<span class="sr"> of Day of AI: Teaching AI Literacy in Grades 9–12</span></a>
 </li></ol></div>
@@ -170,20 +181,42 @@
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <img src="img/brand/dark.svg" alt="NAAIC, National Applied AI Consortium" width="183" height="34" style="height:34px;width:auto">
-        <div class="hosted">
-          <span class="hb"><span>Hosted by</span><span class="chip-logo"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b302d92c05e1b0e471e7b_MDC_logo-horiz.svg" alt="Miami Dade College"></span></span>
-          <span class="hb"><span>Sponsored by</span><span class="chip-logo"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b30438d2e4f8a2e7dbffc_NSF_logo.png" alt="U.S. National Science Foundation"></span></span>
-        </div>
+      <div class="foot-brand">
+        <img src="img/brand/dark.svg" alt="NAAIC, National Applied AI Consortium" width="183" height="34">
+        <p>Building tomorrow's AI workforce, starting today.</p>
       </div>
-      <nav aria-label="Explore"><h2>Explore</h2><ul><li><a href="resources.html">Resources</a></li><li><a href="events.html">Events</a></li><li><a href="#">Impact</a></li><li><a href="#">News</a></li></ul></nav>
-      <nav aria-label="Academia"><h2>Academia</h2><ul><li><a href="#">Colleges</a></li><li><a href="#">Faculty</a></li><li><a href="#">High schools</a></li><li><a href="#">BILT</a></li></ul></nav>
-      <nav aria-label="About"><h2>About</h2><ul><li><a href="#">About NAAIC</a></li><li><a href="#">Partners</a></li><li><a href="#">Contact</a></li><li><a href="#">Accessibility statement</a></li></ul></nav>
+      <nav aria-labelledby="f-explore"><h2 id="f-explore">Explore</h2><ul><li><a href="#">About us</a></li><li><a href="resources.html">Resource Hub</a></li><li><a href="events.html">Events</a></li><li><a href="#">News</a></li></ul></nav>
+      <nav aria-labelledby="f-academia"><h2 id="f-academia">Academia</h2><ul><li><a href="#">Faculty</a></li><li><a href="#">Colleges</a></li><li><a href="#">High schools</a></li><li><a href="#">Strategic partners</a></li></ul></nav>
+      <nav aria-labelledby="f-connect"><h2 id="f-connect">Connect</h2><ul><li><a href="#">Contact us</a></li><li><button class="foot-btn" type="button" data-subscribe>Newsletter</button></li><li><a href="#">LinkedIn</a></li><li><a href="#">YouTube</a></li></ul></nav>
     </div>
-    <div class="foot-bottom"><span>© 2026 NAAIC. All rights reserved.</span><span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Accessibility statement</a></span></div>
+    <div class="support">
+      <div class="support-item">
+        <span class="support-label">Hosted by</span>
+        <a class="chip-logo" href="https://www.mdc.edu"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b302d92c05e1b0e471e7b_MDC_logo-horiz.svg" alt="Miami Dade College"></a>
+      </div>
+      <div class="support-item">
+        <a class="support-label support-link" href="#">Sponsored by<span class="sr"> — see all current funders</span></a>
+        <a class="chip-logo" href="https://www.nsf.gov"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/685b30438d2e4f8a2e7dbffc_NSF_logo.png" alt="U.S. National Science Foundation"></a>
+        <a class="chip-logo" href="#"><img src="https://cdn.prod.website-files.com/68349e4efae79478285634ff/688bacc662a9f0db0768c68c_Google%20Logo%20(1)-p-1080.png" alt="Google"></a>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 National Applied AI Consortium</span><span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Accessibility statement</a></span></div>
   </div>
 </footer>
-<script src="js/site.js?v=2"></script>
+<dialog class="subscribe" id="subscribe" aria-labelledby="sub-h">
+  <form class="sub-form" method="dialog" data-sub-form>
+    <button class="sub-close" type="submit" value="close" formnovalidate aria-label="Close">×</button>
+    <h2 id="sub-h">Get the Consortium in your inbox.</h2>
+    <p>News, events and new resources from NAAIC.</p>
+    <label for="sub-email">Email address</label>
+    <div class="sub-row">
+      <input id="sub-email" autofocus type="email" name="email" autocomplete="email" required placeholder="you@college.edu">
+      <button class="btn btn-aqua" type="submit" value="subscribe">Subscribe</button>
+    </div>
+    <p class="sub-status" role="status" data-sub-status></p>
+  </form>
+</dialog>
+<a class="to-top" href="#top" data-to-top><span aria-hidden="true">↑</span><span class="sr">Back to top</span></a>
+<script src="js/site.js?v=3"></script>
 </body>
 </html>
